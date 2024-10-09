@@ -1,0 +1,235 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti necessari
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumerate}
+
+% Definire colori per i titoli
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{black}} % stile titolo sezione
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{black}} % stile titolo sottosezione
+  {\thesubsection}{1em}{}
+
+% Titolo e autore
+\title{\textbf{Analisi 1}}
+\author{\textit{Andrea Caldato}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Numeri}
+\subsection{Insiemi}
+
+Un \textbf{\emph{insieme}} è una collezione di oggetti distinti, chiamati \textbf{\emph{elementi}}, considerati come un'entità unica. Gli insiemi vengono spesso indicati con lettere maiuscole, mentre i loro elementi con lettere minuscole. Se un elemento \( a \) appartiene all'insieme \( A \), si scrive \( a \in A \). Se non appartiene, si scrive \( a \notin A \).
+
+\subsection{Proprietà degli insiemi}
+
+Gli insiemi possono avere diverse proprietà:
+\begin{itemize}
+	\item \textbf{Insieme vuoto}: È l'insieme che non contiene alcun elemento, indicato con \( \emptyset \).
+	\item \textbf{Inclusione}: Se tutti gli elementi di un insieme \( A \) appartengono a un insieme \( B \), si dice che \( A \) è un sottoinsieme di \( B \), e si scrive \( A \subseteq B \).
+	\item \textbf{Uguaglianza}: Due insiemi \( A \) e \( B \) sono uguali se contengono gli stessi elementi, ossia \( A = B \).
+\end{itemize}
+
+\subsection{Simboli degli insiemi principali}
+
+Ecco alcuni simboli comuni usati per rappresentare insiemi:
+\begin{itemize}
+	\item \( \mathbb{N} \): l'insieme dei numeri naturali.
+	\item \( \mathbb{Z} \): l'insieme dei numeri interi.
+	\item \( \mathbb{Q} \): l'insieme dei numeri razionali.
+	\item \( \mathbb{R} \): l'insieme dei numeri reali.
+	\item \( \mathbb{C} \): l'insieme dei numeri complessi.
+\end{itemize}
+
+\subsection{Operazioni tra insiemi}
+
+Le principali operazioni tra insiemi sono:
+\begin{itemize}
+	\item \textbf{Unione}: L'unione di due insiemi \( A \) e \( B \), indicata con \( A \cup B \), è l'insieme degli elementi che appartengono a \( A \), \( B \), o entrambi.
+	\item \textbf{Intersezione}: L'intersezione di due insiemi \( A \) e \( B \), indicata con \( A \cap B \), è l'insieme degli elementi che appartengono sia a \( A \) che a \( B \).
+	\item \textbf{Differenza}: La differenza tra due insiemi \( A \) e \( B \), indicata con \( A \setminus B \), è l'insieme degli elementi che appartengono ad \( A \) ma non a \( B \).
+	\item \textbf{Complemento}: Il complemento di un insieme \( A \), indicato con \( A^c \), è l'insieme di tutti gli elementi che non appartengono ad \( A \).
+\end{itemize}
+
+\subsection{Prodotto cartesiano}
+
+Il \textbf{\emph{prodotto cartesiano}} di due insiemi \( A \) e \( B \), indicato con \( A \times B \), è l'insieme delle coppie ordinate \( (a, b) \) dove \( a \in A \) e \( b \in B \). Formalmente:
+\[
+	A \times B = \{ (a, b) \mid a \in A \text{ e } b \in B \}.
+\]
+Ad esempio, se \( A = \{1, 2\} \) e \( B = \{x, y\} \), allora:
+\[
+	A \times B = \{ (1, x), (1, y), (2, x), (2, y) \}.
+\]
+
+\subsection{Predicati e affermazioni}
+
+Un \textbf{\emph{predicato}} è una frase contenente una o più variabili che diventa un'affermazione vera o falsa quando si assegnano valori a queste variabili. Ad esempio, il predicato \( P(x) \) con \( P(x): x^2 \geq 0 \) è vero per ogni numero reale \( x \).
+
+Un'\textbf{\emph{affermazione}} è una frase che può essere vera o falsa. Ad esempio, "2 è un numero pari" è un'affermazione vera.
+
+\subsection{Sommatorie}
+
+La \textbf{\emph{sommatoria}} è una notazione compatta per indicare la somma di una sequenza di termini. Viene indicata con il simbolo \( \sum \). Se \( a_i \) è una sequenza, la sommatoria da \( i = m \) a \( n \) si scrive:
+\[
+	\sum_{i=m}^{n} a_i = a_m + a_{m+1} + \cdots + a_n.
+\]
+
+\subsection{Proprietà delle sommatorie}
+
+\begin{itemize}
+	\item \textbf{Somma di costanti}: \( \sum_{i=1}^{n} c = nc \), dove \( c \) è una costante.
+	\item \textbf{Distribuzione}: \( \sum_{i=1}^{n} (a_i + b_i) = \sum_{i=1}^{n} a_i + \sum_{i=1}^{n} b_i \).
+	\item \textbf{Fattore costante}: \( \sum_{i=1}^{n} c \cdot a_i = c \sum_{i=1}^{n} a_i \), dove \( c \) è una costante.
+\end{itemize}
+
+\subsection{Serie geometrica}
+
+Una \textbf{\emph{serie geometrica}} è una somma della forma:
+\[
+	S_n = a + ar + ar^2 + \cdots + ar^{n},
+\]
+dove \( a \) è il primo termine e \( r \) è la ragione della progressione geometrica. La somma della serie geometrica è data da:
+\[
+	S_n = a \cdot \frac{1 - r^{n+1}}{1 - r}, \quad \text{se } r \neq 1.
+\]
+
+\subsection{Binomio di Newton}
+
+Il \textbf{\emph{binomio di Newton}} fornisce una formula per lo sviluppo della potenza di un binomio:
+\[
+	(x + y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k,
+\]
+dove \( \binom{n}{k} \) è il coefficiente binomiale, calcolato come:
+\[
+	\binom{n}{k} = \frac{n!}{k!(n-k)!}.
+\]
+
+\subsection{Disuguaglianza di Bernoulli}
+
+La \textbf{\emph{disuguaglianza di Bernoulli}} afferma che per ogni numero reale \( x \geq -1 \) e per ogni \( n \geq 0 \) intero, vale la seguente disuguaglianza:
+\[
+	(1 + x)^n \geq 1 + nx.
+\]
+Questa disuguaglianza è utile in molte applicazioni dell'analisi matematica.
+
+\subsection{Principio di induzione}
+
+Il \textbf{\emph{principio di induzione matematica}} è un metodo per dimostrare che una proprietà \( P(n) \) è vera per tutti gli interi \( n \geq n_0 \). Il principio si basa su due passi:
+\begin{enumerate}
+	\item \textbf{Base}: Si verifica che la proprietà \( P(n_0) \) è vera.
+	\item \textbf{Passo induttivo}: Si dimostra che, se \( P(k) \) è vera per un certo \( k \geq n_0 \), allora anche \( P(k+1) \) è vera.
+\end{enumerate}
+
+Se entrambi i passi sono soddisfatti, si conclude che \( P(n) \) è vera per tutti gli \( n \geq n_0 \).
+
+\subsection{Principio del minimo intero}
+Il \emph{principio del minimo intero} afferma che ogni insieme non vuoto di numeri naturali ha un minimo. In altre parole, se \( S \subseteq \mathbb{N} \) è un insieme non vuoto, allora esiste un elemento \( m \in S \) tale che \( m \leq s \) per ogni \( s \in S \). Questo principio è fondamentale perché permette di individuare un "punto di partenza" per dimostrazioni che coinvolgono i numeri naturali.
+
+In questo modo, il principio del minimo intero fornisce una base per dimostrare utilizzando il principio di induzione.
+
+\subsection{Numeri naturali \(\mathbb{N}\)}
+I \emph{numeri naturali} sono l'insieme dei numeri interi non negativi e vengono indicati con \( \mathbb{N} \). Formalmente, si può scrivere:
+\[
+	\mathbb{N} = \{0, 1, 2, 3, \ldots\}.
+\]
+I numeri naturali sono utilizzati per contare e ordinare.
+
+Le operazioni fondamentali definite sui numeri naturali includono:
+
+\begin{itemize}
+	\item \textbf{Somma}: Dati due numeri naturali \( a \) e \( b \), la somma \( a + b \) è un numero naturale. Ad esempio, \( 3 + 5 = 8 \).
+	\item \textbf{Moltiplicazione}: Dati due numeri naturali \( a \) e \( b \), il prodotto \( a \cdot b \) è un numero naturale. Ad esempio, \( 4 \cdot 6 = 24 \).
+\end{itemize}
+
+\subsection{L'insieme dei numeri interi \(\mathbb{Z}\)}
+L'insieme dei numeri interi, denotato con \(\mathbb{Z}\), è definito come l'insieme di tutti i numeri interi positivi, negativi e lo zero. Formalmente, possiamo scrivere:
+\[
+	\mathbb{Z} = \{ \ldots, -3, -2, -1, 0, 1, 2, 3, \ldots \}.
+\]
+
+Per definire \(\mathbb{Z}\) in termini di classi di equivalenza, consideriamo la relazione di equivalenza su \(\mathbb{N} \times \mathbb{N}\) definita come segue:
+\[
+	(a, b) \sim (c, d) \iff a - b = c - d.
+\]
+
+Questa relazione stabilisce che le coppie \((a, b)\) e \((c, d)\) sono equivalenti se la differenza tra il primo e il secondo elemento della prima coppia è uguale alla differenza tra il primo e il secondo elemento della seconda coppia.
+
+Dalla relazione di equivalenza possiamo definire le classi di equivalenza. Ogni classe di equivalenza corrisponde a un numero intero e può essere rappresentata come:
+\[
+	[x] = \{ (a, b) \in \mathbb{N} \times \mathbb{N} \mid a - b = n \text{ per qualche } n \in \mathbb{Z} \}.
+\]
+
+In questo modo, i numeri interi possono essere costruiti a partire dalle coppie di numeri naturali, evidenziando che ogni numero intero \( n \) può essere visto come la differenza tra due numeri naturali:
+\[
+	n = a - b \quad \text{con} \quad a, b \in \mathbb{N} \quad \text{e} \quad a \geq b.
+\]
+
+Pertanto, possiamo esprimere \(\mathbb{Z}\) come l'insieme delle classi di equivalenza associate alle differenze tra numeri naturali:
+\[
+	\mathbb{Z} = \{ [a, b] \mid a, b \in \mathbb{N} \}.
+\]
+
+L'insieme dei numeri interi \(\mathbb{Z}\) è chiuso rispetto alle seguenti operazioni:
+
+\begin{enumerate}[i.]
+	\item \textbf{Somma algebrica}: Dati due numeri interi \( x, y \in \mathbb{Z} \), la loro somma è definita come:
+	      \[
+		      x + y \in \mathbb{Z}.
+	      \]
+
+	\item \textbf{Moltiplicazione}: Dati due numeri interi \( x, y \in \mathbb{Z} \), il loro prodotto è definito come:
+	      \[
+		      x \cdot y \in \mathbb{Z}.
+	      \]
+\end{enumerate}
+
+\subsection{L'insieme dei numeri razionali \(\mathbb{Q}\)}
+L'insieme dei numeri razionali, denotato con \(\mathbb{Q}\), è definito come l'insieme di tutti i quozienti di numeri interi, dove il denominatore è diverso da zero. Formalmente, possiamo scrivere:
+\[
+	\mathbb{Q} = \left\{ \frac{a}{b} \mid a, b \in \mathbb{Z}, b \neq 0 \right\}.
+\]
+
+I numeri razionali possono essere considerati come classi di equivalenza formate da coppie di numeri interi \((a, b)\), dove \(b\) è diverso da zero. Due coppie \((a_1, b_1)\) e \((a_2, b_2)\) sono equivalenti se il quoziente è lo stesso, cioè:
+\[
+	(a_1, b_1) \sim (a_2, b_2) \iff a_1 \cdot b_2 = a_2 \cdot b_1.
+\]
+
+Questa relazione stabilisce che le coppie \((a_1, b_1)\) e \((a_2, b_2)\) rappresentano lo stesso numero razionale.
+
+La classe di equivalenza associata a un quoziente \(\frac{a}{b}\) può essere espressa come:
+\[
+	\left[\frac{a}{b}\right] = \left\{ \left(\alpha, \beta\right) \in \mathbb{Z} \times \mathbb{Z} \mid \alpha \cdot b = a \cdot \beta, \, \beta \neq 0 \right\}.
+\]
+
+In questo modo, i numeri razionali possono essere costruiti a partire dalle coppie di numeri interi. Ogni numero razionale \(\frac{a}{b}\) rappresenta la classe di equivalenza di tutte le coppie \((ka, kb)\) per ogni intero \(k \neq 0\).
+
+L'insieme dei numeri razionali \(\mathbb{Q}\) è chiuso rispetto alle seguenti operazioni:
+
+\begin{enumerate}[i.]
+	\item \textbf{Somma algebrica}: Dati due numeri razionali \( x = \frac{a}{b} \) e \( y = \frac{c}{d} \), la loro somma è definita come:
+	      \[
+		      x + y = \frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}.
+	      \]
+
+	\item \textbf{Moltiplicazione}: Dati due numeri razionali \( x = \frac{a}{b} \) e \( y = \frac{c}{d} \), il loro prodotto è definito come:
+	      \[
+		      x \cdot y = \frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}.
+	      \]
+\end{enumerate}
+\end{document}
+
